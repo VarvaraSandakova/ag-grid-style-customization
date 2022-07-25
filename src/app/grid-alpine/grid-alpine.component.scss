@@ -1,0 +1,35 @@
+//Third approach: override styles using encapsulation: ViewEncapsulation.None
+ //
+ //grid-alpine {
+ //  // styles applied for the whole grid
+ //  .customization-ag-grid-style-theme-alpine {
+ //    font-family: "Gill Sans";
+ //    border-color: #dee5ea;
+ //    background-color: #fff;
+ //
+ //    // styles applied for the header
+ //    .customization-ag-grid-style-header {
+ //      background-color: #beccd5;
+ //      .customization-ag-grid-style-header-cell,
+ //      .customization-ag-grid-style-header-group-cell {
+ //        border-color: #dee5ea;
+ //        &:hover{
+ //          background-color: #fff
+ //        }
+ //      }
+ //    }
+ //    // styles applied for the row
+ //    .customization-ag-grid-style-row {
+ //      &.customization-ag-grid-style-row-odd {
+ //        background-color: #beccd5;
+ //        &:hover {
+ //          background-color: #dee5ea;
+ //        }
+ //      }
+ //      // styles applied for the cell
+ //      .customization-ag-grid-style-cell{
+ //        border: none;
+ //      }
+ //    }
+ //  }
+ //}

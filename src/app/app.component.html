@@ -1,0 +1,35 @@
+<!--First approach - global overriding default styles of customization-ag-grid-style-grid-->
+<ag-grid-angular
+  style="width: 535px; height: 365px;"
+  class="ag-theme-alpine user-grid"
+  [columnDefs]="columnDefs"
+  [defaultColDef]="defaultColDef"
+  [rowData]="(rowData$ | async)?.data"
+  [rowHeight]="50"
+  [headerHeight]="38"
+  [groupHeaderHeight]="24"
+  [suppressMultiSort]="false"
+  [domLayout]="'autoHeight'"
+  (gridReady)="onGridReady()"
+></ag-grid-angular>
+
+
+<!--Third approach - redefine styles using ViewEncapsulation.None-->
+<!--<grid-alpine>-->
+<!--  <customization-ag-grid-style-grid-angular-->
+<!--    style="width: 535px; height: 300px;"-->
+<!--    class="customization-ag-grid-style-theme-alpine"-->
+<!--    [columnDefs]="columnDefs"-->
+<!--    [defaultColDef]="defaultColDef"-->
+<!--    [rowData]="(rowData$ | async)?.data"-->
+<!--    [rowHeight]="50"-->
+<!--    [headerHeight]="38"-->
+<!--    [groupHeaderHeight]="24"-->
+<!--    [detailRowAutoHeight]="true"-->
+<!--    [suppressMultiSort]="false"-->
+<!--    [domLayout]="'autoHeight'"-->
+<!--    (gridReady)="onGridReady()"-->
+<!--  ></customization-ag-grid-style-grid-angular>-->
+<!--</grid-alpine>-->
+
+<button class="btn-color" (click)="changeHeaderColor()">Change color</button>

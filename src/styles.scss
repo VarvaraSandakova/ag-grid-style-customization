@@ -1,0 +1,57 @@
+@import "ag-grid-community/dist/styles/ag-grid.css";
+@import "ag-grid-community/dist/styles/ag-theme-alpine.css";
+@import 'ag-grid-community/dist/styles/ag-theme-alpine/sass/ag-theme-alpine-mixin';
+
+:root {
+  --background-color: #beccd5
+}
+
+//First approach - global overriding default styles of customization-ag-grid-style-grid-->
+.ag-theme-alpine.user-grid {
+  font-family: "Gill Sans";
+  border-color: #dee5ea;
+
+  .ag-header {
+    background-color: var(--background-color);
+    .ag-header-cell,
+    .ag-header-group-cell {
+      border-color: #dee5ea;
+      &:hover{
+        background-color: #fff
+      }
+    }
+  }
+
+  .ag-row {
+    &.ag-row-odd {
+      background-color: #beccd5;
+      &:hover {
+        background-color: #dee5ea;
+      }
+    }
+    .ag-cell{
+      border: none;
+    }
+  }
+}
+
+// Second approach - global overriding default styles of customization-ag-grid-style-grid
+//.customization-ag-grid-style-theme-alpine.user-grid {
+//  @include customization-ag-grid-style-theme-alpine(
+//      (
+//        cell-horizontal-border: null,
+//        font-family: "Gill Sans",
+//        border-color: #dee5ea,
+//        header-background-color: #beccd5,
+//        background-color: #fff,
+//        row-hover-color: #dee5ea,
+//        odd-row-background-color: #beccd5,
+//        header-cell-hover-background-color: #fff,
+//      )
+//  );
+//}
+
+.btn-color {
+  padding: 10px;
+  margin: 10px;
+}
